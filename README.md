@@ -2,7 +2,7 @@
 
 http://rent-front2.s3-website.us-east-2.amazonaws.com/
 
-This MEAN Stack App is hosted on Amazon Web Services and is a virtual Car Rental Shop.
+This MEAN Stack App is hosted on Amazon Web Services and is a Virtual Car Rental Shop.
 
 Angular is used as my front-end framework. This app is connected to a NodeJS server that communicates with MongoDB to fetch/save data and to demonstrate CRUD operations.
 
