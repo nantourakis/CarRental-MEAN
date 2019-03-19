@@ -1,8 +1,26 @@
 # CarRental-MEAN
 
-This is my first MEAN Stack App created which demonstrates the process of renting an exotic car, this app is hosted on Amazon Web Services.
+http://rent-front2.s3-website.us-east-2.amazonaws.com/
+
+This MEAN Stack App is hosted on Amazon Web Services and is a virtual Car Rental Shop.
 
 Angular is used as my front-end framework. This app is connected to a NodeJS server that communicates with MongoDB to fetch/save data and to demonstrate CRUD operations.
+
+This app also features:
+
+A Login System which was built from Scratch with NodeJS
+
+The use of Express framework together with NodeJS
+
+Components that can be reused with Angular
+
+Third-party libraries and frameworks such as Angular Material, Bootstrap, ngx-bootstrap, MomentJS
+
+Route Endpoints with NodeJS that commnuicate with Angular Requests
+
+The ability to upload Images to MongoDB and to fetch them back
+
+Tables using Angular Material which have Pagination
 
 First Register and then Login to the app.
 
@@ -14,4 +32,5 @@ You can later view your reservation details under the "manage reservations" tab 
 
 Cars and users are stored within a mongo Database. You are also able to create a car and add it to the database under the "create car" tab, this newly added vehicle is now able to be rented.
 
-http://rent-front2.s3-website.us-east-2.amazonaws.com/
+
+
