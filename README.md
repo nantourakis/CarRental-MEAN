@@ -6,7 +6,7 @@ This MEAN Stack App is hosted on Amazon Web Services and is a Virtual Car Rental
 
 Angular is used as my front-end framework. This app is connected to a NodeJS server that communicates with MongoDB to fetch/save data and to demonstrate CRUD operations.
 
-**First Register and then Login to the App**
+First Register and then Login to the App
 
 Select the dates from the main page for which you are looking to rent a car for
 
