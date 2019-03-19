@@ -8,7 +8,7 @@ Angular is used as my front-end framework. This app is connected to a NodeJS ser
 
 First Register and then Login to the app.
 
-Select the dates from the main page for which you are looking to rent a car for.
+Select the dates from the main page for which you are looking to rent a car for
 
 You will be then shown all cars and their specs which are available during this time period to rent. If a specific car is already rented for this time period, then it will not appear in your search results.
 
@@ -17,21 +17,21 @@ You can later view your reservation details under the "manage reservations" tab 
 Cars and users are stored within a mongo Database. You are also able to create a car and add it to the database under the "create car" tab, this newly added vehicle is now able to be rented.
 
 This app also features:
+<ul>
+<li>A Login System which was built from Scratch with NodeJS</li> 
 
-A Login System which was built from Scratch with NodeJS
+<li>The use of Express framework together with NodeJS</li> 
 
-The use of Express framework together with NodeJS
+<li>Components that can be reused with Angular</li> 
 
-Components that can be reused with Angular
+<li>Third-party libraries and frameworks such as Angular Material, Bootstrap, ngx-bootstrap, MomentJS</li> 
 
-Third-party libraries and frameworks such as Angular Material, Bootstrap, ngx-bootstrap, MomentJS
+<li>Route Endpoints with NodeJS that commnuicate with Angular Requests</li> 
 
-Route Endpoints with NodeJS that commnuicate with Angular Requests
+<li>The ability to upload Images to MongoDB and to fetch them back</li> 
 
-The ability to upload Images to MongoDB and to fetch them back
-
-Tables using Angular Material which have Pagination
-
+<li>Tables using Angular Material which have Pagination</li> 
+<ul>
 
 
 
