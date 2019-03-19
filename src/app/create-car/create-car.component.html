@@ -1,0 +1,75 @@
+<div style="height: calc(100vh - 50px)">
+
+  <div class="container">
+    <mat-card>
+      <mat-card-title>Create a Car</mat-card-title>
+      <mat-card-content>
+        <!-- Template Driven Approach, binding done with ngModel-->
+        <form (submit)="onCreate(createform)" #createform="ngForm">
+
+          <mat-form-field>
+            <input matInput
+            type="text"
+            name="brand"
+            ngModel
+            required
+            #brandInput="ngModel"
+            placeholder="Car Brand">
+            <!-- Structure Directive, ng IF Statement / if brand input is invalid then display this message -->
+            <mat-error *ngIf="brandInput.invalid">Please provide a car brand</mat-error>
+          </mat-form-field>
+
+          <mat-form-field>
+              <input matInput
+              type="text"
+              name="model"
+              ngModel
+              required
+              #modelInput="ngModel"
+              placeholder="Car Model">
+              <!-- Structure Directive, ng IF Statement / if brand input is invalid then display this message -->
+              <mat-error *ngIf="modelInput.invalid">Please provide a car model</mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput
+                type="text"
+                name="power"
+                ngModel
+                required
+                #powerInput="ngModel"
+                placeholder="Horsepower">
+                <!-- Structure Directive, ng IF Statement / if brand input is invalid then display this message -->
+                <mat-error *ngIf="powerInput.invalid">Please provide the Car's Horsepower</mat-error>
+              </mat-form-field>
+
+              <!-- Year but may change to seats -->
+              <mat-form-field>
+                  <input matInput
+                  type="number"
+                  name="seats"
+                  ngModel
+                  required
+                  #seatsInput="ngModel"
+                  placeholder="Seats">
+                  <!-- Structure Directive, ng IF Statement / if brand input is invalid then display this message -->
+                  <mat-error *ngIf="seatsInput.invalid">Please provide the seats of your car</mat-error>
+                </mat-form-field>
+
+                <!-- upload image file from type file and click listener (click) then add method -->
+            <input #fileinput style="display: none" type="file" (change)="onFileSelected($event)">
+            <button matInput class="btn btn-outline-success" type="button" (click)="fileinput.click()">
+             Choose Image 
+            </button>
+            <br><br>
+
+            <!-- Submit Form-->
+            <button mat-raised-button color="primary" type="submit">Create</button>
+
+        </form>
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+
+</div>

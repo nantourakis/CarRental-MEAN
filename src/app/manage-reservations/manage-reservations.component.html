@@ -1,0 +1,41 @@
+<div style="height: calc(100vh - 50px)">
+
+    <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource">
+      
+          <!-- Car ID Column -->
+          <ng-container matColumnDef="car_id">
+            <th mat-header-cell *matHeaderCellDef>Car ID</th>
+          <!-- ? bc it's an asynch request -->
+            <td mat-cell *matCellDef="let element"> {{element?.car_id}} </td>
+          </ng-container>
+      
+          <!-- Rserved From Column -->
+          <ng-container matColumnDef="reserved_from">
+            <th mat-header-cell *matHeaderCellDef>Reserved From</th>
+            <!-- use Angular pipe | -->
+            <td mat-cell *matCellDef="let element"> {{element?.fromDate | date: 'MM-dd-yyyy'}} </td>
+          </ng-container>
+      
+          <!-- Rserved Until Column -->
+          <ng-container matColumnDef="reserved_until">
+            <th mat-header-cell *matHeaderCellDef>Reserved Until</th>
+            <td mat-cell *matCellDef="let element"> {{element?.untilDate | date: 'MM-dd-yyyy'}} </td>
+          </ng-container>
+      
+          <!-- Cancel Column -->
+          <ng-container matColumnDef="cancel">
+            <th mat-header-cell *matHeaderCellDef>Cancel Reservation</th>
+            <td mat-cell *matCellDef="let element">
+                <button (click)="onCancel(element)" class="btn btn-outline-danger mr-1">Cancel</button>
+            </td>
+          </ng-container>
+      
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+      </div>
+
+</div>

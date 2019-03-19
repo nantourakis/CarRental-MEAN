@@ -1,0 +1,23 @@
+<div class="row">
+    <h1 align="center">Please provide your vehicle reservation dates</h1>
+</div>
+
+<div class="row">
+    <!--margin auto to move to center of page, bsConfig is from ngx-bootstrap-->
+    <div style="margin: auto">
+      <!--dateForm is local reference, pass into submit listener-->
+        <form (submit)="onSearch(dateForm)" #dateForm="ngForm">
+            <input
+            type="text"
+            bsDaterangepicker
+            ngModel
+            placeholder="Please select your dates"
+            class="form-control"
+            name="dateInput"
+            [bsConfig]="{rangeInputFormat: 'MM/DD/YYYY', containerClass: 'theme-dark-blue'}"
+            >
+        <button type="submit" class="btn btn-outline-success btn-block">Search</button>
+
+        </form>
+    </div>
+</div>

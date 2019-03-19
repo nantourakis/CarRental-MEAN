@@ -1,0 +1,56 @@
+<div style="height: calc(100vh - 50px); overflow: hidden">
+  <div class="row">
+    <div style="margin: auto">
+      <!--bringing in date-selector componenet to display it on main page -->
+      <app-date-selector></app-date-selector>
+    </div>
+  </div>
+</div>
+
+<div class="row top-row">
+
+  <ng-container *ngFor="let car of cars; let i = index;">
+
+      <div class="col-md-5">
+          <div class="card">
+            <div class="card-header">
+              <div class="row">
+
+                  <div class="col-md-3">
+                    <!-- display car brand, async request -->
+                      <p class="branding">{{car?.brand}}</p>
+                  </div>
+
+                   <div class="col-md-3">
+                       <p align="center" class="model">{{car?.model}}</p><br>
+                       <img src="{{path}}model.png" class="model1" align="center" >
+                   </div>
+
+                   <div class="col-md-3">
+                       <p align="center" class="model">{{car?.power}} HP</p><br>
+                       <img src="{{path}}power.png" class="image_power" align="center" >
+                   </div>
+
+                   <div class="col-md-3">
+                       <p align="center" class="model">{{car?.seats}}</p><br>
+                       <img src="{{path}}door.png" class="doors" align="center" >
+                   </div>
+
+
+              </div>
+            </div>
+
+            <div>
+              <img class="temp" src="{{car?.imgUrl}}">
+            </div>
+            <div class="footer">
+                <button (click)="onRent(car)" class="btn btn-outline-success btn-block">Rent this Car</button>
+            </div>
+          </div>
+      </div>
+      <!-- count cars, 2 cars in a row. i = counter-->
+      <div *ngIf="(i+1) % 2 === 0" class="w-100 "></div>
+  </ng-container>
+
+
+</div>

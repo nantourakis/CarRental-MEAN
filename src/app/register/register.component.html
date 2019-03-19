@@ -1,0 +1,29 @@
+<div style="height: 100vh; overflow: hidden">
+  <mat-card>
+      <form (submit)="onRegister(registerform)" #registerform="ngForm">
+  
+          <mat-form-field>
+              <input matInput 
+              placeholder="Email"
+              name="email"
+              required
+              email
+              #emailInput="ngModel" 
+              ngModel>
+              <mat-error *ngIf="emailInput.invalid">Please provide a valid Email Address</mat-error>
+          </mat-form-field>
+  
+          <mat-form-field>
+              <textarea matInput 
+              placeholder="Password"
+              name="password"
+              ngModel>
+              </textarea>
+          </mat-form-field>
+  
+          <button class="btn btn-primary" type="submit">Register</button>
+  
+      </form>
+  </mat-card>
+  </div>
+  <!-- ngModel to use one way binding to take value of the form -->

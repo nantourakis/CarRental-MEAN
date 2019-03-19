@@ -1,0 +1,38 @@
+<div style="height: calc(100vh - 50px)">
+
+  <div class="mat-elevation-z8">
+    <!-- property binding for datasource-->
+    <table mat-table [dataSource]="dataSource">
+  
+      <!-- Email Column -->
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef> Email </th>
+        <!-- Looping through the element to display result -->
+        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+      </ng-container>
+  
+      <!-- Admin Column -->
+      <ng-container matColumnDef="isAdmin">
+        <th mat-header-cell *matHeaderCellDef> Admin </th>
+        <td mat-cell *matCellDef="let element"> {{element.isAdmin}} </td>
+      </ng-container>
+  
+      <!-- Actions Column -->
+      <ng-container matColumnDef="edit">
+        <th mat-header-cell *matHeaderCellDef> Actions </th>
+        <td mat-cell *matCellDef="let element"> 
+          <!-- add a click listener to the button, pass the onDelete & onAdmin method when clicked-->
+          <button class="btn btn-outline-danger mr-1" (click)="onDelete(element)">Delete</button>
+          <button class="btn btn-outline-success mr-1" (click)="onAdmin(element)">Make Admin</button>
+
+        </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </div>
+
+</div>
