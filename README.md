@@ -16,7 +16,7 @@ You can later view your reservation details under the "manage reservations" tab 
 
 Cars and users are stored within a mongo Database. You are also able to create a car and add it to the database under the "create car" tab, this newly added vehicle is now able to be rented.
 
-**This app also features:**
+**This app features:**
 <ul>
 <li>A Login System which was built from Scratch with NodeJS</li> 
 
